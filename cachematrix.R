@@ -1,7 +1,5 @@
-## Put comments here that give an overall description of what your
-## functions do
-
 ##05162015 - first look at the file
+##05201015 - little commits.
 ## Below are comments related to the inverted matrix and caching exercise.
 ## 1. makeCacheMAtrix create an inveted matrix and caches it.
 ## 2. cacheSolve references the previously cached inverted matrix and inverts it.
