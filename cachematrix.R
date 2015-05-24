@@ -54,8 +54,8 @@ cacheSolve <- function(x, ...) {
 }
 
 ## ==== Change history ====
-# 05162015 - first look at the file
-# 05201015 - little commits.
-# 05211015 - completed - needs testing.
-# 05231015 - completed
+# 05162015 - First look at the file
+# 05201015 - Little commits.
+# 05211015 - Close to finishing - needs testing.
+# 05231015 - Completed and tested in R studio. 
 
