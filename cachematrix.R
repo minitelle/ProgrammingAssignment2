@@ -24,28 +24,28 @@ makeCacheMatrix <- function(x = matrix()) {
   # 3. Set the inverse (solve) of our matrix
   setinvmat <- function(solve) invmat <<- solve
   
-  # 4. get the inverse of our matrix if it exists
+  # 4. Get the inverse of our matrix
   getinvmat <- function() invmat
   
-  # make a list of all the previous 4 functions
+  # Make a list of all the previous 4 functions
   list(set = set, get = get, setinvmat = setinvmat, getinvmat = getinvmat)
 }
 
-## Step II: inverting the cached matrix. Two steps have to be completed:
-## 1. verify if the the invert of our inverted special matrix already exisits in the parent env. If it does and it has already been computed, then grab that value and return it.
+## Step II: Return the cache of the inversed matrix. Two steps have to be completed:
+## 1. Verify if the the inverse of our matrix already exists in the parent env. If it does, then grab that value and return it.
 ## 2. If the value of the inverse is not present, compute the value and return the output.
 
 cacheSolve <- function(x, ...) {
   # Return the inversed matrix for 'x'
   invmat <- x$getinvmat()
   
-  #1. Verify if the inverse already exists if so return it.  
+  # 1. Verify if the inverse already exists if so return it.  
   if(!is.null(invmat)) {
     print("here's the cached inverse:")
     return(invmat)
   }
   
-  #2. If the inveser doens't exist, get the matrix newmat and inverse it.
+  # 2. If the inveser doens't exist, get the matrix newmat and inverse it.
   newmat <- x$get()
   invmat <- solve(newmat, ...)
   x$setinvmat(invmat)

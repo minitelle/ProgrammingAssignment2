@@ -57,4 +57,6 @@ cacheSolve <- function(x, ...) {
 # 05162015 - first look at the file
 # 05201015 - little commits.
 # 05211015 - completed - needs testing.
-
+# 05231015 - completion and testing - comparison
+http://rstudio-pubs-static.s3.amazonaws.com/56438_c8c1b3a349d84e02996f91b394779b06.html
+https://github.com/sefakilic/coursera-rprog-assignment2/blob/master/cachematrix.R
