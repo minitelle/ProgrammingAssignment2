@@ -1,6 +1,6 @@
 ## Below are comments related to the inverted matrix and caching exercise.
 ## Step I. makeCacheMAtrix create an inveted matrix and caches it.
-## Step II. cacheSolve references the previously cached inverted matrix and inverts it.
+## Step II. cacheSolve references the previously cached inverted matrix to retun it.
 
 ## Step I: First create the funtion to cache the value of our inverted special matrix. For that you need 4 functions:
 ## 1. set the value of the matrix
@@ -54,8 +54,10 @@ cacheSolve <- function(x, ...) {
 }
 
 ## ==== Change history ====
-# 05162015 - First look at the file
+# 05162015 - First look at the file.
 # 05201015 - Little commits.
 # 05211015 - Close to finishing - needs testing.
-# 05231015 - Completed and tested in R studio. 
+# 05231015 - Completed and tested in R studio.
+# 05241015 - Actual assignment submission.
+
 
