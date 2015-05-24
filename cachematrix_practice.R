@@ -10,23 +10,23 @@
 ## See the below 4 steps:
 
 makeCacheMatrix <- function(x = matrix()) {
-  
+
   invmat <- NULL
   # 1. Set a matrix and its value
   set <- function(mat){
-    x <<- mat
-    invmat <<- NULL
+      x <<- mat
+      invmat <<- NULL
   }
   
   # 2. Get the value of the matrix after evaluating from the parent environment.
   get <- function() x
-  
+
   # 3. Set the inverse (solve) of our matrix
   setinvmat <- function(solve) invmat <<- solve
-  
+
   # 4. get the inverse of our matrix if it exists
   getinvmat <- function() invmat
-  
+
   # make a list of all the previous 4 functions
   list(set = set, get = get, setinvmat = setinvmat, getinvmat = getinvmat)
 }
@@ -44,18 +44,17 @@ cacheSolve <- function(x, ...) {
     print("here's the cached inverse:")
     return(invmat)
   }
-  
+
   #2. If the inveser doens't exist, get the matrix newmat and inverse it.
   newmat <- x$get()
   invmat <- solve(newmat, ...)
   x$setinvmat(invmat)
   invmat
-  
+
 }
 
 ## ==== Change history ====
 # 05162015 - first look at the file
 # 05201015 - little commits.
 # 05211015 - completed - needs testing.
-# 05231015 - completed
 
